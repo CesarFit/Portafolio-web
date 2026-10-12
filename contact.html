@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Contact the developer for project inquiries, collaborations, or job opportunities.">
+    <title>Contact | Developer Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <header>
+        <nav role="navigation" aria-label="Main navigation">
+            <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-navigation" aria-label="Open navigation menu">
+                <span class="nav-toggle-bar"></span>
+                <span class="nav-toggle-bar"></span>
+                <span class="nav-toggle-bar"></span>
+            </button>
+            <ul id="primary-navigation">
+                <li><a href="index.html#home">Home</a></li>
+                <li><a href="about-me.html#about-me">About Me</a></li>
+                <li><a href="projects.html#projects">Projects</a></li>
+                <li><a href="skills.html#skills">Skills</a></li>
+                <li><a href="contact.html#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="contact" aria-labelledby="contact-title">
+            <h2 id="contact-title">Contact</h2>
+
+            <form id="contact-form" action="#" method="post">
+                <div class="form-field">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" placeholder="Your name" autocomplete="name" minlength="2" maxlength="80" aria-describedby="name-message" required>
+                    <p class="field-message" id="name-message"></p>
+                </div>
+
+                <div class="form-field">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" placeholder="your@email.com" autocomplete="email" maxlength="254" aria-describedby="email-message" required>
+                    <p class="field-message" id="email-message"></p>
+                </div>
+
+                <div class="form-field form-field--wide">
+                    <label for="subject">Subject</label>
+                    <input type="text" id="subject" name="subject" placeholder="Project inquiry" minlength="3" maxlength="120" aria-describedby="subject-message" required>
+                    <p class="field-message" id="subject-message"></p>
+                </div>
+
+                <div class="form-field form-field--wide">
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" rows="6" placeholder="Write your message here..." minlength="10" maxlength="1000" aria-describedby="message-message" required></textarea>
+                    <p class="field-message" id="message-message"></p>
+                </div>
+
+                <div class="form-actions form-field--wide">
+                    <button type="submit">Send Message</button>
+                    <p class="form-status" id="form-status" role="status" aria-live="polite"></p>
+                </div>
+            </form>
+        </section>
+    </main>
+</body>
+</html>

@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Explore selected web development projects, case studies, and portfolio work completed by a developer.">
+    <title>Projects | Developer Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <header>
+        <nav role="navigation" aria-label="Main navigation">
+            <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-navigation" aria-label="Open navigation menu">
+                <span class="nav-toggle-bar"></span>
+                <span class="nav-toggle-bar"></span>
+                <span class="nav-toggle-bar"></span>
+            </button>
+            <ul id="primary-navigation">
+                <li><a href="index.html#home">Home</a></li>
+                <li><a href="about-me.html#about-me">About Me</a></li>
+                <li><a href="projects.html#projects">Projects</a></li>
+                <li><a href="skills.html#skills">Skills</a></li>
+                <li><a href="contact.html#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="projects" aria-labelledby="projects-title">
+            <h2 id="projects-title">Projects</h2>
+            <div class="project-filters" role="group" aria-label="Filter projects by category">
+                <button class="project-filter" type="button" data-filter="all" aria-pressed="true">All</button>
+                <button class="project-filter" type="button" data-filter="business" aria-pressed="false">Business</button>
+                <button class="project-filter" type="button" data-filter="productivity" aria-pressed="false">Productivity</button>
+                <button class="project-filter" type="button" data-filter="lifestyle" aria-pressed="false">Lifestyle</button>
+                <button class="project-filter" type="button" data-filter="education" aria-pressed="false">Education</button>
+                <button class="project-filter" type="button" data-filter="creative" aria-pressed="false">Creative</button>
+                <button class="project-filter" type="button" data-filter="technology" aria-pressed="false">Technology</button>
+                <button class="project-filter" type="button" data-filter="sustainability" aria-pressed="false">Sustainability</button>
+            </div>
+            <p class="project-count" id="project-count" role="status" aria-live="polite">Showing 12 projects</p>
+            <div class="project-list">
+                <article class="project-item" data-category="business">
+                    <figure><button class="lightbox-trigger" type="button" aria-label="Open larger image: Neighborhood Cafe Website"><img src="https://images.unsplash.com/photo-1554118811-1e0d58224f24?auto=format&amp;fit=crop&amp;w=400&amp;h=250&amp;q=80" width="400" height="250" alt="Cozy neighborhood cafe interior with tables and warm lighting"></button></figure>
+                    <h3>Neighborhood Cafe Website</h3>
+                    <p>A responsive cafe site featuring a menu, opening hours, location details, and a simple reservation call to action.</p>
+                </article>
+                <article class="project-item" data-category="productivity">
+                    <figure><button class="lightbox-trigger" type="button" aria-label="Open larger image: Daily Habit Planner"><img src="https://images.unsplash.com/photo-1455390582262-044cdead277a?auto=format&amp;fit=crop&amp;w=400&amp;h=250&amp;q=80" width="400" height="250" alt="Notebook and pen ready for planning daily tasks"></button></figure>
+                    <h3>Daily Habit Planner</h3>
+                    <p>A focused task-planning interface for organizing daily priorities, tracking habits, and reviewing progress.</p>
+                </article>
+                <article class="project-item" data-category="business">
+                    <figure><button class="lightbox-trigger" type="button" aria-label="Open larger image: Green Basket Grocery Store"><img src="https://images.unsplash.com/photo-1542838132-92c53300491e?auto=format&amp;fit=crop&amp;w=400&amp;h=250&amp;q=80" width="400" height="250" alt="Fresh vegetables and produce at a grocery market"></button></figure>
+                    <h3>Green Basket Grocery Store</h3>
+                    <p>An online storefront concept with clear product categories, accessible product details, and a streamlined cart flow.</p>
+                </article>
+                <article class="project-item" data-category="lifestyle">
+                    <figure><button class="lightbox-trigger" type="button" aria-label="Open larger image: City Guide Directory"><img src="https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?auto=format&amp;fit=crop&amp;w=400&amp;h=250&amp;q=80" width="400" height="250" alt="City skyline viewed from above for a travel guide"></button></figure>
+                    <h3>City Guide Directory</h3>
+                    <p>A searchable guide to local attractions, restaurants, and services, designed to work smoothly on phones and desktops.</p>
+                </article>
+                <article class="project-item" data-category="education">
+                    <figure><button class="lightbox-trigger" type="button" aria-label="Open larger image: BrightPath Learning Dashboard"><img src="https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&amp;fit=crop&amp;w=400&amp;h=250&amp;q=80" width="400" height="250" alt="Students learning together in a bright classroom"></button></figure>
+                    <h3>BrightPath Learning Dashboard</h3>
+                    <p>A student dashboard concept for viewing courses, checking lesson progress, and finding upcoming assignments.</p>
+                </article>
+                <article class="project-item" data-category="lifestyle">
+                    <figure><button class="lightbox-trigger" type="button" aria-label="Open larger image: MoveWell Fitness Tracker"><img src="https://images.unsplash.com/photo-1517836357463-d25dfeac3438?auto=format&amp;fit=crop&amp;w=400&amp;h=250&amp;q=80" width="400" height="250" alt="Athlete exercising in a gym"></button></figure>
+                    <h3>MoveWell Fitness Tracker</h3>
+                    <p>A clean activity-tracking interface that presents workout goals, weekly summaries, and exercise history.</p>
+                </article>
+                <article class="project-item" data-category="lifestyle">
+                    <figure><button class="lightbox-trigger" type="button" aria-label="Open larger image: ClearDay Weather App"><img src="https://images.unsplash.com/photo-1504608524841-42fe6f032b4b?auto=format&amp;fit=crop&amp;w=400&amp;h=250&amp;q=80" width="400" height="250" alt="Sunlight breaking through clouds over a landscape"></button></figure>
+                    <h3>ClearDay Weather App</h3>
+                    <p>A weather dashboard concept that makes current conditions and short-term forecasts easy to scan at a glance.</p>
+                </article>
+                <article class="project-item" data-category="productivity">
+                    <figure><button class="lightbox-trigger" type="button" aria-label="Open larger image: Pocket Budget Tracker"><img src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&amp;fit=crop&amp;w=400&amp;h=250&amp;q=80" width="400" height="250" alt="Calculator and financial paperwork arranged on a desk"></button></figure>
+                    <h3>Pocket Budget Tracker</h3>
+                    <p>A personal finance interface for recording expenses, setting monthly budgets, and understanding spending categories.</p>
+                </article>
+                <article class="project-item" data-category="creative">
+                    <figure><button class="lightbox-trigger" type="button" aria-label="Open larger image: ArtHouse Online Gallery"><img src="https://images.unsplash.com/photo-1579783902614-a3fb3927b6a5?auto=format&amp;fit=crop&amp;w=400&amp;h=250&amp;q=80" width="400" height="250" alt="Framed colorful painting displayed in an art gallery"></button></figure>
+                    <h3>ArtHouse Online Gallery</h3>
+                    <p>A gallery layout that highlights artwork with readable captions, artist details, and an accessible browsing experience.</p>
+                </article>
+                <article class="project-item" data-category="technology">
+                    <figure><button class="lightbox-trigger" type="button" aria-label="Open larger image: DevNotes Documentation Site"><img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&amp;fit=crop&amp;w=400&amp;h=250&amp;q=80" width="400" height="250" alt="Developers collaborating around a computer"></button></figure>
+                    <h3>DevNotes Documentation Site</h3>
+                    <p>A structured documentation site with clear topic navigation, code examples, and responsive reading layouts.</p>
+                </article>
+                <article class="project-item" data-category="sustainability">
+                    <figure><button class="lightbox-trigger" type="button" aria-label="Open larger image: EcoTrack Impact Dashboard"><img src="https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?auto=format&amp;fit=crop&amp;w=400&amp;h=250&amp;q=80" width="400" height="250" alt="Green forested hills representing environmental impact tracking"></button></figure>
+                    <h3>EcoTrack Impact Dashboard</h3>
+                    <p>A sustainability dashboard concept for tracking household energy use, transport choices, and estimated carbon impact.</p>
+                </article>
+                <article class="project-item" data-category="education">
+                    <figure><button class="lightbox-trigger" type="button" aria-label="Open larger image: SkillSwap Community Platform"><img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&amp;fit=crop&amp;w=400&amp;h=250&amp;q=80" width="400" height="250" alt="Small group sharing ideas around a table"></button></figure>
+                    <h3>SkillSwap Community Platform</h3>
+                    <p>A community learning platform concept for discovering local mentors, sharing skills, and arranging collaborative sessions.</p>
+                </article>
+            </div>
+        </section>
+        <dialog class="project-lightbox" id="project-lightbox" aria-labelledby="lightbox-caption">
+            <button class="lightbox-close" type="button" aria-label="Close image preview">
+                <span></span>
+                <span></span>
+            </button>
+            <img class="lightbox-image" src="" alt="">
+            <p class="lightbox-caption" id="lightbox-caption"></p>
+        </dialog>
+    </main>
+</body>
+</html>
