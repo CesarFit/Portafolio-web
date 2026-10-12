@@ -13,6 +13,15 @@ html {
     html {
         scroll-behavior: auto;
     }
+
+    .welcome-content {
+        animation: none;
+    }
+
+    .welcome-link,
+    .highlight-arrow {
+        transition: none;
+    }
 }
 
 body {
@@ -126,6 +135,252 @@ main {
     max-width: 1100px;
     margin: 2rem auto;
     padding: 0 1rem;
+}
+
+#home {
+    width: 100%;
+    max-width: none;
+    margin: 0;
+    padding: 0;
+}
+
+.welcome-hero {
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    min-height: min(720px, 78vh);
+    min-height: min(720px, 78svh);
+    overflow: hidden;
+    padding: clamp(3rem, 8vw, 7rem) max(1.5rem, calc((100vw - 1100px) / 2));
+    background: #172323;
+    color: #ffffff;
+    border-radius: 0;
+    box-shadow: none;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+.welcome-image,
+.welcome-shade {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.welcome-image {
+    object-fit: cover;
+    object-position: center 52%;
+}
+
+.welcome-shade {
+    background: rgba(9, 20, 21, 0.7);
+}
+
+.welcome-content {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    max-width: 760px;
+    padding: 2rem 0;
+    animation: welcome-arrive 700ms ease both;
+}
+
+.welcome-eyebrow,
+.highlights-eyebrow {
+    margin: 0 0 1.25rem;
+    color: #a7f3d0;
+    font-size: 0.8rem;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.welcome-eyebrow span {
+    padding: 0 0.4rem;
+    color: #fbbf24;
+}
+
+.welcome-content h1 {
+    max-width: 12ch;
+    margin: 0;
+    color: #ffffff;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: clamp(3.25rem, 8vw, 6rem);
+    font-weight: 400;
+    line-height: 1.02;
+}
+
+.welcome-content h1 span {
+    color: #a7f3d0;
+}
+
+.welcome-intro {
+    max-width: 38rem;
+    margin: 1.5rem 0 0;
+    color: #e5e7eb;
+    font-size: 1.15rem;
+}
+
+.welcome-actions {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    margin-top: 2rem;
+}
+
+.welcome-link {
+    display: inline-flex;
+    min-height: 3rem;
+    padding: 0.75rem 1.1rem;
+    border: 1px solid #a7f3d0;
+    border-radius: 3px;
+    color: #ffffff;
+    font-weight: 700;
+    text-decoration: none;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    gap: 0.75rem;
+    transition: background-color 160ms ease, color 160ms ease;
+}
+
+.welcome-link--primary {
+    background-color: #a7f3d0;
+    color: #102322;
+}
+
+.welcome-link--primary:hover {
+    background-color: #6ee7b7;
+}
+
+.welcome-link--secondary:hover {
+    background-color: rgba(255, 255, 255, 0.12);
+}
+
+.welcome-link:focus-visible,
+.welcome-scroll:focus-visible,
+.highlight-link:focus-visible {
+    outline: 3px solid #fbbf24;
+    outline-offset: 4px;
+}
+
+.welcome-location {
+    margin: 2rem 0 0;
+    color: #d1d5db;
+    font-size: 0.9rem;
+}
+
+.welcome-location span {
+    padding: 0 0.4rem;
+    color: #fbbf24;
+}
+
+.welcome-scroll {
+    position: absolute;
+    z-index: 1;
+    right: max(1.5rem, calc((100vw - 1100px) / 2));
+    bottom: 2rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 2.75rem;
+    height: 2.75rem;
+    border: 1px solid rgba(255, 255, 255, 0.7);
+    border-radius: 50%;
+    color: #ffffff;
+    font-size: 1.2rem;
+    text-decoration: none;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+}
+
+.home-highlights {
+    display: -ms-grid;
+    display: grid;
+    grid-template-columns: minmax(220px, 0.8fr) minmax(0, 1.2fr);
+    gap: 3rem;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 3.5rem 1.5rem 4rem;
+    background: transparent;
+    border-radius: 0;
+    box-shadow: none;
+}
+
+.highlights-eyebrow {
+    margin-bottom: 0.75rem;
+    color: #0f766e;
+}
+
+.highlights-heading h2 {
+    margin: 0;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 2rem;
+    font-weight: 400;
+    line-height: 1.2;
+}
+
+.highlights-links {
+    border-top: 1px solid #d1d5db;
+}
+
+.highlight-link {
+    display: -ms-grid;
+    display: grid;
+    grid-template-columns: 2rem minmax(0, 1fr) 1.5rem;
+    gap: 1rem;
+    padding: 1rem 0;
+    border-bottom: 1px solid #d1d5db;
+    color: #1f2937;
+    text-decoration: none;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+.highlight-number {
+    color: #0f766e;
+    font-size: 0.8rem;
+    font-weight: 700;
+}
+
+.highlight-link strong,
+.highlight-link small {
+    display: block;
+}
+
+.highlight-link strong {
+    font-size: 1rem;
+}
+
+.highlight-link small {
+    margin-top: 0.15rem;
+    color: #4b5563;
+}
+
+.highlight-arrow {
+    color: #0f766e;
+    font-size: 1.2rem;
+    transition: transform 160ms ease;
+}
+
+.highlight-link:hover .highlight-arrow {
+    -webkit-transform: translate(3px, -3px);
+    transform: translate(3px, -3px);
+}
+
+@keyframes welcome-arrive {
+    from { opacity: 0; transform: translateY(14px); }
+    to { opacity: 1; transform: translateY(0); }
 }
 
 article,
@@ -573,6 +828,11 @@ button {
 }
 
 @media (max-width: 900px) {
+    .home-highlights {
+        grid-template-columns: minmax(0, 1fr) minmax(0, 1.4fr);
+        gap: 2rem;
+    }
+
     .about-content {
         -ms-grid-columns: 1fr;
         grid-template-columns: 1fr;
@@ -645,6 +905,58 @@ button {
 
     nav a {
         font-size: 0.95rem;
+    }
+
+    .welcome-hero {
+        min-height: 680px;
+        min-height: min(680px, 82svh);
+        padding: 3rem 1.25rem 5.5rem;
+    }
+
+    .welcome-image {
+        object-position: 58% center;
+    }
+
+    .welcome-shade {
+        background: rgba(9, 20, 21, 0.76);
+    }
+
+    .welcome-content h1 {
+        font-size: 3.25rem;
+    }
+
+    .welcome-intro {
+        font-size: 1.05rem;
+    }
+
+    .welcome-actions {
+        max-width: 19rem;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+    }
+
+    .welcome-link {
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+    }
+
+    .welcome-location {
+        max-width: 19rem;
+        margin-top: 1.5rem;
+    }
+
+    .welcome-scroll {
+        right: 1.25rem;
+        bottom: 1.25rem;
+    }
+
+    .home-highlights {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 1.5rem;
+        padding: 2.5rem 1.25rem 3rem;
     }
 
     article,
